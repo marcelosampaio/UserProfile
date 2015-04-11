@@ -14,14 +14,30 @@
 
 @implementation ViewController
 
+@synthesize userPicture;
+
+
+#pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self configureUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+#pragma mark - User Interface
+-(void)configureUI{
+    
+    self.userPicture.layer.cornerRadius=25;
+    self.userPicture.layer.masksToBounds=YES;
+    
 }
+
+
+
+
+
+
 
 @end
